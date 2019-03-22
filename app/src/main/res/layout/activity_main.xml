@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/background"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -12,7 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="0.65"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -21,7 +21,11 @@
             android:layout_height="wrap_content"
             android:text="الان چه احساسی داری؟"
             android:textStyle="bold"
-            android:textSize="30dp"/>
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textColor="#FFF"
+            android:layout_margin="10dp"
+            android:background="@drawable/backtext2"/>
 
 
     </LinearLayout>
@@ -29,29 +33,38 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="0.35"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.5"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            >
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/btn_excelent"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:text="Button 1"
+                android:text="عالی"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:background="@drawable/gamebtn"
                 />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btn_good"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:text="Button 2"
+                android:text="خوبم"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:background="@drawable/gamebtn"
                 />
 
 
@@ -65,19 +78,27 @@
 
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btn_notbad"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:text="Button 3"
+                android:text="خوب نیستم"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:background="@drawable/gamebtn"
                 />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/btn_verybad"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:text="Button 4"
+                android:text="خیلی بدم"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:background="@drawable/gamebtn"
 
                 />
 
