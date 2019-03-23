@@ -9,18 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".write.mainWrite"></activity>
+        <activity android:name=".core.SplachScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".read.EditDataActivity" />
+        <activity android:name=".read.listDataActivity" />
+        <activity android:name=".write.mainWrite" />
         <activity android:name=".paint.mainPaint" />
         <activity android:name=".base.verybad" />
         <activity android:name=".base.notbad" />
         <activity android:name=".base.good" />
         <activity android:name=".base.exelent" />
         <activity android:name=".core.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

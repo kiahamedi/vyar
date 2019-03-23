@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Random;
+
 import ir.kiahamedi.vyar.R;
 
 public class mainWrite extends AppCompatActivity {
@@ -29,13 +31,28 @@ public class mainWrite extends AppCompatActivity {
 
         mDatabaseHelper = new DatabaseHelper(this);
 
+        final Random rn = new Random();
+
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String newEntry = textvorojak.getText().toString();
                 if(textvorojak.length() != 0){
-                    AddData(newEntry);
-                    textvorojak.setText("");
+                    int num = rn.nextInt(3 - 1 + 1) + 1;
+                    if (num == 1){
+                        toastMessage("وروجک یک لبخند هم بزن و دوباره رو قلب بزن");
+                    }
+                    if (num == 2){
+                        AddData(newEntry);
+                        textvorojak.setText("");
+                        finish();
+                    }
+                    if (num == 3){
+                        toastMessage("وروجک نمیخوای زیاد بخندی؟");
+                    }
+
+
+
                 }else {
                     toastMessage("وروجک برای کار کردن قلب شیطون باید چیزی بنویسی");
                 }

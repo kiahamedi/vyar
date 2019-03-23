@@ -27,6 +27,7 @@
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
         android:background="@drawable/heart"/>
 
 </RelativeLayout>

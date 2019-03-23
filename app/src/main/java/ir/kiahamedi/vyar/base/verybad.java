@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.Random;
 
 import ir.kiahamedi.vyar.R;
 import tyrantgit.explosionfield.ExplosionField;
@@ -30,6 +33,7 @@ public class verybad extends AppCompatActivity {
         draw = (Button) findViewById(R.id.btn_draw);
         random = (Button) findViewById(R.id.btn_random);
 
+        final Random rn = new Random();
 
         random.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +46,23 @@ public class verybad extends AppCompatActivity {
                     }
 
                     public void onFinish() {
+                        int num = rn.nextInt(3 - 1 + 1) + 1;
+                        if (num == 1){
+                            Toast.makeText(getApplicationContext(),"اجی مجی بریم نقاشی بکشیم",Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(verybad.this, ir.kiahamedi.vyar.paint.mainPaint.class);
+                            startActivity(i);
+                        }
+                        if (num == 2){
+                            Toast.makeText(getApplicationContext(),"اجی مجی بریم دلیل ناراحتیه وروجک رو بنویس",Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(verybad.this, ir.kiahamedi.vyar.write.mainWrite.class);
+                            startActivity(i);
+                        }
+                        if (num == 3){
+                            Toast.makeText(getApplicationContext(),"اجی مجی یکم از گذشته بخونیم",Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(verybad.this, ir.kiahamedi.vyar.read.listDataActivity.class);
+                            startActivity(i);
+                        }
+
                         //Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.base.verybad.class);
                         //startActivity(i);
                     }
@@ -79,8 +100,8 @@ public class verybad extends AppCompatActivity {
                     }
 
                     public void onFinish() {
-                        //Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.base.verybad.class);
-                       // startActivity(i);
+                        Intent i = new Intent(verybad.this, ir.kiahamedi.vyar.read.listDataActivity.class);
+                        startActivity(i);
                     }
                 }.start();
             }
@@ -124,6 +145,7 @@ public class verybad extends AppCompatActivity {
         reset(write);
         reset(read);
         reset(draw);
+        reset(random);
     }
 
 
@@ -132,4 +154,6 @@ public class verybad extends AppCompatActivity {
         super.onResume();
         fiXAlls();
     }
+
+
 }

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import ir.kiahamedi.vyar.R;
 import tyrantgit.explosionfield.ExplosionField;
@@ -55,8 +56,9 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     public void onFinish() {
-                        Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.base.exelent.class);
-                        startActivity(i);
+                        Toast.makeText(getApplicationContext(),"جادوی این سنگ فعال نشده",Toast.LENGTH_SHORT).show();
+                        //Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.base.exelent.class);
+                        //startActivity(i);
                     }
                 }.start();
 
@@ -76,8 +78,9 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     public void onFinish() {
-                        Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.base.good.class);
-                        startActivity(i);
+                        //Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.base.good.class);
+                        //startActivity(i);
+                        Toast.makeText(getApplicationContext(),"جادوی این سنگ فعال نشده",Toast.LENGTH_SHORT).show();
                     }
                 }.start();
 
@@ -96,8 +99,9 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     public void onFinish() {
-                        Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.base.notbad.class);
-                        startActivity(i);
+                        //Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.base.notbad.class);
+                        //startActivity(i);
+                        Toast.makeText(getApplicationContext(),"جادوی این سنگ فعال نشده",Toast.LENGTH_SHORT).show();
                     }
                 }.start();
             }

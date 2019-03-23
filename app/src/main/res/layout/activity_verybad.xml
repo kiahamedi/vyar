@@ -83,7 +83,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:text="انتخاب من"
+                android:text="سنگ جادو"
                 android:textColor="#FFF"
                 android:textStyle="bold"
                 android:textSize="25dp"
