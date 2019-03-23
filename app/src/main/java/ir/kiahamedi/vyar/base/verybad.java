@@ -60,8 +60,8 @@ public class verybad extends AppCompatActivity {
                     }
 
                     public void onFinish() {
-                        //Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.base.verybad.class);
-                        //startActivity(i);
+                        Intent i = new Intent(verybad.this, ir.kiahamedi.vyar.write.mainWrite.class);
+                        startActivity(i);
                     }
                 }.start();
             }

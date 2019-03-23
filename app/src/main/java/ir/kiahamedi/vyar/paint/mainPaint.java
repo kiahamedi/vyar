@@ -32,7 +32,7 @@ public class mainPaint extends AppCompatActivity {
         shot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bitmap b = screenshot.takescreenshotOfRootView(main);
+                //Bitmap b = screenshot.takescreenshotOfRootView(main);
                 //long unixTime = System.currentTimeMillis() / 1000L;
                 //saveImage(b,"save");
             }
