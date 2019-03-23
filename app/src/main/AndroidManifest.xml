@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".verybad"></activity>
-        <activity android:name=".notbad" />
-        <activity android:name=".good" />
-        <activity android:name=".exelent" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".paint.mainPaint"></activity>
+        <activity android:name=".base.verybad" />
+        <activity android:name=".base.notbad" />
+        <activity android:name=".base.good" />
+        <activity android:name=".base.exelent" />
+        <activity android:name=".core.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

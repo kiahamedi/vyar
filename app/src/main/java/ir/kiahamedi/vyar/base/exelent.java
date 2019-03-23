@@ -1,7 +1,9 @@
-package ir.kiahamedi.vyar;
+package ir.kiahamedi.vyar.base;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import ir.kiahamedi.vyar.R;
 
 public class exelent extends AppCompatActivity {
 

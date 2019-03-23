@@ -7,7 +7,7 @@
     android:background="@drawable/background"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".core.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

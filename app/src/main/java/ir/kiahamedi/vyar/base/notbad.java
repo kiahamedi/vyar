@@ -1,13 +1,15 @@
-package ir.kiahamedi.vyar;
+package ir.kiahamedi.vyar.base;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class good extends AppCompatActivity {
+import ir.kiahamedi.vyar.R;
+
+public class notbad extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_good);
+        setContentView(R.layout.activity_notbad);
     }
 }

@@ -1,4 +1,4 @@
-package ir.kiahamedi.vyar;
+package ir.kiahamedi.vyar.core;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -10,8 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Timer;
-
+import ir.kiahamedi.vyar.R;
 import tyrantgit.explosionfield.ExplosionField;
 
 public class MainActivity extends AppCompatActivity {
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     public void onFinish() {
-                        Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.exelent.class);
+                        Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.base.exelent.class);
                         startActivity(i);
                     }
                 }.start();
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     public void onFinish() {
-                        Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.good.class);
+                        Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.base.good.class);
                         startActivity(i);
                     }
                 }.start();
@@ -96,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     public void onFinish() {
-                        Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.notbad.class);
+                        Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.base.notbad.class);
                         startActivity(i);
                     }
                 }.start();
@@ -114,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     public void onFinish() {
-                        Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.verybad.class);
+                        Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.base.verybad.class);
                         startActivity(i);
                     }
                 }.start();

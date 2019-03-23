@@ -7,7 +7,7 @@
     android:background="@drawable/background"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".core.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,9 +20,9 @@
             android:id="@+id/main_Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="یکی از اشیا پایین رو انتخاب کن"
+            android:text="یکی از سنگ ها رو انتخاب کن"
             android:textStyle="bold"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:gravity="center"
             android:textColor="#FFF"
             android:layout_margin="10dp"
@@ -45,11 +45,11 @@
             >
 
             <Button
-                android:id="@+id/btn_excelent"
+                android:id="@+id/btn_draw"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:text="عالی"
+                android:text="بکش"
                 android:textColor="#FFF"
                 android:textStyle="bold"
                 android:textSize="25dp"
@@ -57,11 +57,11 @@
                 />
 
             <Button
-                android:id="@+id/btn_good"
+                android:id="@+id/btn_write"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:text="خوبم"
+                android:text="بنویس"
                 android:textColor="#FFF"
                 android:textStyle="bold"
                 android:textSize="25dp"
@@ -79,11 +79,11 @@
 
 
             <Button
-                android:id="@+id/btn_notbad"
+                android:id="@+id/btn_random"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:text="خوب نیستم"
+                android:text="انتخاب من"
                 android:textColor="#FFF"
                 android:textStyle="bold"
                 android:textSize="25dp"
@@ -91,11 +91,11 @@
                 />
 
             <Button
-                android:id="@+id/btn_verybad"
+                android:id="@+id/btn_read"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:text="خیلی بدم"
+                android:text="بخون"
                 android:textColor="#FFF"
                 android:textStyle="bold"
                 android:textSize="25dp"
