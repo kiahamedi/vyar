@@ -18,13 +18,14 @@ public class MainActivity extends AppCompatActivity {
     private Button exelent,good,notbad,verybad;
     private ExplosionField mExplosionField;
     private TextView mainText;
+    private MediaPlayer mplayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mExplosionField = ExplosionField.attach2Window(this);
-        MediaPlayer mplayer = MediaPlayer.create(MainActivity.this,R.raw.jungle);
+        mplayer = MediaPlayer.create(MainActivity.this,R.raw.jungle);
         mplayer.setLooping(true);
         mplayer.start();
 
@@ -142,6 +143,10 @@ public class MainActivity extends AppCompatActivity {
         reset(verybad);
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 
     @Override
     protected void onResume() {
