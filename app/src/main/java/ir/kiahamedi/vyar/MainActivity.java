@@ -1,11 +1,16 @@
 package ir.kiahamedi.vyar;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.Timer;
 
 import tyrantgit.explosionfield.ExplosionField;
 
@@ -20,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mExplosionField = ExplosionField.attach2Window(this);
+        MediaPlayer mplayer = MediaPlayer.create(MainActivity.this,R.raw.jungle);
+        mplayer.setLooping(true);
+        mplayer.start();
 
         exelent = (Button) findViewById(R.id.btn_excelent);
         good = (Button) findViewById(R.id.btn_good);
@@ -33,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 fiXAlls();
+
             }
         });
 
@@ -40,6 +49,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mExplosionField.explode(v);
+                new CountDownTimer(1000, 1000) {
+                    public void onTick(long millisUntilFinished) {
+
+                    }
+
+                    public void onFinish() {
+                        Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.exelent.class);
+                        startActivity(i);
+                    }
+                }.start();
+
+
 
             }
         });
@@ -49,6 +70,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mExplosionField.explode(v);
+                new CountDownTimer(1000, 1000) {
+                    public void onTick(long millisUntilFinished) {
+
+                    }
+
+                    public void onFinish() {
+                        Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.good.class);
+                        startActivity(i);
+                    }
+                }.start();
+
             }
         });
 
@@ -57,6 +89,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mExplosionField.explode(v);
+
+                new CountDownTimer(1000, 1000) {
+                    public void onTick(long millisUntilFinished) {
+
+                    }
+
+                    public void onFinish() {
+                        Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.notbad.class);
+                        startActivity(i);
+                    }
+                }.start();
             }
         });
 
@@ -64,6 +107,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mExplosionField.explode(v);
+
+                new CountDownTimer(1000, 1000) {
+                    public void onTick(long millisUntilFinished) {
+
+                    }
+
+                    public void onFinish() {
+                        Intent i = new Intent(MainActivity.this, ir.kiahamedi.vyar.verybad.class);
+                        startActivity(i);
+                    }
+                }.start();
             }
         });
     }
@@ -90,4 +144,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        fiXAlls();
+    }
 }
